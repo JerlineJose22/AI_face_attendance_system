@@ -40,7 +40,7 @@ def showAttendance():
                 attachment_path =filename
                 # Create a multipart message
                 message = MIMEMultipart()
-                message['From'] = 'jojerline2212@gmail.com' 
+                message['From'] = 'Enter Your sender mail her' 
                 message['To'] = receiver_email
                 message['Subject'] = subject
             except:
@@ -62,8 +62,8 @@ def showAttendance():
             try:
                 server = smtplib.SMTP(smtp_server, smtp_port)
                 server.starttls()
-                server.login('jojerline2212@gmail.com', 'dowl qhjp uuzb peym')
-                server.sendmail('jojerline2212@gmail.com', receiver_email, message.as_string())
+                server.login('Your sender mail', 'Gamil app password') # go to your google account search app password 
+                server.sendmail('sender mail', receiver_email, message.as_string())
                 status_label.config(text=f"Mail Sent Successfully", fg='green')
                 root.destroy()
             except:
