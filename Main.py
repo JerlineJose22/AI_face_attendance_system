@@ -3,7 +3,7 @@ from tkinter import *
 from PIL import ImageTk, Image
 import PIL
 import Add_new_face
-import Attendance_taker
+import select_lecture
 import Attendancedata
 import remove_student
 
@@ -72,14 +72,14 @@ r = tk.Button(
 r.place(x=100, y=520)
 
 
-def automatic_attedance():
-    Attendance_taker.main() # Call Main Fuction from Attendance_taker.py
+def Take_attedance():
+    select_lecture.Select_lecture() # Call Main Fuction from Attendance_taker.py
 
 
 r = tk.Button(
     window,
     text="Make Attendance",
-    command=automatic_attedance,
+    command=Take_attedance,
     bd=10,
     font=("times new roman", 16),
     bg="black",
@@ -91,7 +91,7 @@ r.place(x=550, y=520)
 
 
 def view_attendance():
-    Attendancedata.showAttendance() # Call ShowAttendance fuction from attendancedata.py
+    Attendancedata.Show_attendance() # Call ShowAttendance fuction from attendancedata.py
 
 
 r = tk.Button(
